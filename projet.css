@@ -1,0 +1,170 @@
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #abb9e4;
+  color: #333;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #808a9b;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 40px;
+  font-weight: bold;
+  color: #abb9e4;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffd6000
+}
+
+.hero {
+  background: url("image/ion-fet-C4G18Paw0d4-unsplash.jpg") no-repeat center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background: #00ffc8;
+  color: #0d47a1;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #ffca28;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #6f85a1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h2 {
+  color: #6685b3ff;
+  margin-bottom: 0.5rem;
+}
+
+.card-content p {
+  margin-bottom: 1rem;
+}
+
+.btn-secondary {
+  background: #0d47a1;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #1565c0;
+}
+
+footer {
+  background: #0d47a1;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: #0d47a1;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+}
